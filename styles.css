@@ -1,0 +1,172 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Header */
+h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* User List and Details Container */
+#user-list, #user-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* User Card Styling */
+.user-card {
+    display: flex;
+    justify-content: space-between; /* Ensures proper spacing between elements */
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px; /* Adds spacing between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* User Card Hover Effect */
+.user-card:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Container for Buttons Inside User Cards */
+.user-card-buttons {
+    display: flex;
+    gap: 10px; /* Adds spacing between buttons */
+}
+
+/* Button Styling */
+button, a {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover, a:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: translateY(-2px) scale(1.05); /* Slight scaling effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active, a:active {
+    transform: translateY(2px); /* Depress effect */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styling */
+form {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: #ffcc00;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: #333;
+    background-color: #ffffff;
+}
+
+form input:focus {
+    border-color: #ffcc00;
+}
+
+/* Responsive Design */
+/* Phone Screen (max-width: 600px) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #user-list, #user-details, form {
+        width: 90%;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Tablet Screen (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    #user-list, #user-details, form {
+        width: 80%;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+}
+
+/* Laptop Screen (1025px to 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #user-list, #user-details, form {
+        width: 70%;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 12px 20px;
+    }
+}
